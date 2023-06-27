@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['jest'],
+  plugins: ['jest', 'import'],
   rules: {
     'no-console': 'off',
     'no-shadow': 'off',
