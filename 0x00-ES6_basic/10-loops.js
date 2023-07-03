@@ -1,5 +1,7 @@
 export default function appendToEacArrayValue(array, appendString) {
   const theArray = [];
-  array.forEach((element) => theArray.push(appendString + element));
+  for (const element of array) {
+    theArray.push(appendString + element);
+  }
   return theArray;
 }
