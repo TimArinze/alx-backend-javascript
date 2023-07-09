@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString) {
   const selected = [];
   if (!(startString)) {
-    return ''
+    return '';
   }
   if (startString.length === 0) {
     return selected.join('');
