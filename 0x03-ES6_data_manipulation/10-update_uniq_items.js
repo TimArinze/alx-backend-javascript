@@ -4,8 +4,7 @@ export default function updateUniqueItems(map) {
       try {
         map.set(key, 100);
       } catch (error) {
-        console.error('Cannot process', error);
-        throw error;
+        throw new Error('Cannot process');
       }
     }
   }
