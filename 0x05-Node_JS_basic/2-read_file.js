@@ -3,7 +3,7 @@ const fs = require('fs');
 const countStudents = (path) => {
   fs.readFile(path, 'utf-8', (err, data) => {
     if (err) {
-      throw new Error('Cannot load the database');
+      Error('Cannot load the database');
     } else {
       const rows = data.split('\n').slice(1);
       const students = [];
