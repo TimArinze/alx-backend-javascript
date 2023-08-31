@@ -5,8 +5,20 @@ class Car {
         this._color = color
     }
 
+    get brand() {
+        return this._brand
+    }
+
+    get motor() {
+        return this._motor
+    }
+
+    get color() {
+        return this._color
+    }
+
     cloneCar() {
-        return new Car(this._brand, this._motor, this._color)
+        return new Car
     }
 }
 
