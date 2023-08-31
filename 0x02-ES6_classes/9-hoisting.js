@@ -1,5 +1,7 @@
+// Object: Hoisting
 export class HolbertonClass {
   constructor(year, location) {
+    // eslint-enable no-underscore-dangle
     this._year = year;
     this._location = location;
   }
