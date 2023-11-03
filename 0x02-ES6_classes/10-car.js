@@ -4,6 +4,9 @@ class Car {
     this._motor = motor;
     this._color = color;
   }
+  // static get [Symbol.species]() {
+  //   return this;
+  // }
 
   get brand() {
     return this._brand;
@@ -18,7 +21,8 @@ class Car {
   }
 
   cloneCar() {
-    return new Car
+    // it returns a new object with the same properties with the constructor not filled in
+    return new this.constructor[Symbol.species]();
   }
 }
 
