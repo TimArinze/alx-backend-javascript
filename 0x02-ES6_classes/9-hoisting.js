@@ -21,7 +21,7 @@ export class StudentHolberton {
   }
 
   get fullName() {
-    return `${this._firstName} ${this._lastName}`;6
+    return `${this._firstName} ${this._lastName}`; 6;
   }
 
   get holbertonClass() {
