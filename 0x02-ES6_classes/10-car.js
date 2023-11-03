@@ -18,7 +18,7 @@ class Car {
   }
 
   cloneCar() {
-    return new Car();
+    return new Car
   }
 }
 
