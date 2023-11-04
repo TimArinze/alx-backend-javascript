@@ -1,13 +1,14 @@
 // Using Process stdin
+process.stdin.setEncoding('utf8');
 
-const message = 'Welcome to Holberton School, what is your name?\n';
-process.stdout.write(message);
-
+// Handle input events
 process.stdin.on('data', (data) => {
+  //
+  console.log('Welcome to Holberton School, what is your name?');
   const input = data.toString().trim();
-  process.stdout.write(`Your name is: ${input}\n`);
+  console.log(`Your name is: ${input}`);
 });
 
 process.stdin.on('end', () => {
-  process.stdout.write('This important software is now closing\n');
+  console.log('This important software is now closing');
 });
