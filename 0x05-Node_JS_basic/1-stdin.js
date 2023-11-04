@@ -5,7 +5,7 @@ process.stdout.write(message);
 
 process.stdin.on('data', (data) => {
   const input = data.toString().trim();
-  process.stdout.write(`Your name is: ${input}\n`);
+  process.stdout.write(`Your name is: ${input}\r`);
 });
 
 process.stdin.on('close', () => {
