@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-async function countStudents(path) {
+function countStudents(path) {
   return new Promise((resolve, reject) => {
     if (!fs.existsSync(path)) {
       reject(Error('Cannot load the database'));
