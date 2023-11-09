@@ -18,7 +18,7 @@ const app = http.createServer((req, res) => {
       .catch((err) => {
         res.statusCode = 404;
         res.setHeader('Content-Type', 'text/plain');
-        res.end(err.message);
+        res.end(`This is the list of our students\n${err.message}`);
       });
   }
 });

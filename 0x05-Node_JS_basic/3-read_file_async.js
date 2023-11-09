@@ -3,6 +3,9 @@ const fs = require('fs');
 async function countStudents(path) {
   try {
     const data = await fs.promises.readFile(path, 'utf8');
+    if (!data) {
+      return('Cannot load the database')
+    }
     const rows = data.split('\n').slice(1);
     const students = [];
     rows.forEach((row) => {
