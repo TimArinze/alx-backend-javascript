@@ -18,9 +18,13 @@ async function countStudents(path) {
         SWE.push(student[0]);
       }
     });
-    console.log(`Number of students: ${CS.length + SWE.length}`);
-    console.log(`Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`);
-    console.log(`Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`);
+    const a = `Number of students: ${CS.length + SWE.length}`
+    console.log(a)
+    const b = `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`
+    console.log(b)
+    const c = `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`
+    console.log(c)
+    return (`${a}\n${b}\n${c}`)
   } catch (error) {
     throw Error('Cannot load the database');
   }

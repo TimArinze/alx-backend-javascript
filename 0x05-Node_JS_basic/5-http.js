@@ -11,11 +11,13 @@ const app = http.createServer((req, res) => {
   } else if (req.url === '/students') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    reader(process.argv[2]).then((data) => {
-      res.end(`This is the list of our students\n${data}`);
-    }).catch((err) => {
-      res.end(err.message);
-    });
+    reader(process.argv[2])
+      .then((data) => {
+        res.end(`This is the list of our students\n${data}`);
+      })
+      .catch((err) => {
+        res.end(err.message);
+      });
   }
 });
 
