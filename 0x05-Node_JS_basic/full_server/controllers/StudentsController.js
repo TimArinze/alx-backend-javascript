@@ -39,7 +39,7 @@ class StudentsController {
       })
       .catch(() => {
         res.status(500);
-        res.json({ Error: 'Cannot load the database' });
+        res.send('Cannot load the database');
         return res;
       });
     return res;
