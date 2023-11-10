@@ -1,5 +1,6 @@
 const readDatabase = require('../utils');
-const database = process.argv[2]
+
+const database = process.argv[2];
 
 class StudentsController {
   static getAllStudents(req, res) {
