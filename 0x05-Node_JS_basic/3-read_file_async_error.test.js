@@ -14,7 +14,7 @@ describe('countStudents', () => {
     consoleSpy.restore();
   });
 
-  it('logs to the console the right messages', (done) => {
+  it('logs to the console the right messages', () => new Promise((done) => {
     countStudents('./database.csv').then(() => {
       expect(consoleSpy.calledWith('Number of students: 10')).to.be.true;
       expect(consoleSpy.calledWith('Number of students in CS: 6. List: Johenn, Arielle, Jonathen, Emmenuel, Guillaume, Katie')).to.be.true;
@@ -22,5 +22,5 @@ describe('countStudents', () => {
 
       done();
     });
-  });
+  }));
 });

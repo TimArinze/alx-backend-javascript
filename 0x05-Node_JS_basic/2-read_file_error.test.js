@@ -13,7 +13,7 @@ describe('countStudents', () => {
   afterEach(() => {
     consoleSpy.restore();
   });
-  
+
   it('throws the correct error message', () => {
     expect(() => countStudents('./blabl.csv')).to.throw('Cannot load the database');
   });

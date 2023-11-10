@@ -4,7 +4,7 @@ async function countStudents(path) {
   try {
     const data = await fs.promises.readFile(path, 'utf8');
     if (!data) {
-      return('Cannot load the database')
+      return ('Cannot load the database');
     }
     const rows = data.split('\n').slice(1);
     const students = [];
@@ -21,13 +21,13 @@ async function countStudents(path) {
         SWE.push(student[0]);
       }
     });
-    const a = `Number of students: ${CS.length + SWE.length}`
-    console.log(a)
-    const b = `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`
-    console.log(b)
-    const c = `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`
-    console.log(c)
-    return (`${a}\n${b}\n${c}`)
+    const a = `Number of students: ${CS.length + SWE.length}`;
+    console.log(a);
+    const b = `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`;
+    console.log(b);
+    const c = `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`;
+    console.log(c);
+    return (`${a}\n${b}\n${c}`);
   } catch (error) {
     throw Error('Cannot load the database');
   }
