@@ -3,15 +3,15 @@ const readDatabase = require('../utils');
 class StudentsController {
   static async getAllStudents(req, res) {
     try {
-      const data = await readDatabase(process.argv[2])
+      const data = await readDatabase(process.argv[2]);
       const firstLine = 'This is the list of our students';
       const csStudents = `Number of students in CS: ${data.CS.length}. List: ${data.CS.join(', ')}`;
       const sweStudents = `Number of students in SWE: ${data.SWE.length}. List: ${data.SWE.join(', ')}`;
       res.status(200).send(`${firstLine}\n${csStudents}\n${sweStudents}`);
-      } catch (error) {
-        console.error(error)
-        res.status(500).send('Cannot load the database');
-      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Cannot load the database');
+    }
   }
 
   static async getAllStudentsByMajor(req, res) {
@@ -33,6 +33,7 @@ class StudentsController {
       console.error(error);
       res.status(500).send('Cannot load the database');
     }
+    return res;
   }
 }
 

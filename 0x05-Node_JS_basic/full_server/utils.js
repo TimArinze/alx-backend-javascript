@@ -15,7 +15,7 @@ async function readDatabase(path) {
     const CS = [];
     const SWE = [];
     students.forEach((student) => {
-      const [name , , , major] = student;
+      const [name, , , major] = student;
       if (major === 'CS') {
         CS.push(name);
       } else if (major === 'SWE') {
