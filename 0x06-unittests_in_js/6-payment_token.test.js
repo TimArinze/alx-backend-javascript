@@ -3,15 +3,14 @@ const mocha = require('mocha');
 const chai = require('chai');
 const sinon = require('sinon');
 const expect = chai.expect;
-const paymentToken = require('./6-payment_token.js');
+const getPaymentTokenFromAPI = require('./6-payment_token.js');
 
-describe('test a promise', () => {
-        it('Promise should resolve', (done) => {
-            paymentToken(true).then((data) => {
-                expect(data).to.eql({ data: 'Successful response from the API' });
-                done();
-            }
-            )
-        });
-
-});
+describe('getPaymentTokenFromAPI', function () {
+  it('Promise should resolve', function (done) {
+    getPaymentTokenFromAPI(true).then(function(result) {
+      //deep is used with equal to perform a deep equility check when comparing objects
+      expect(result).to.deep.equal({ data: 'Successful response from the API' });
+      done();
+    }).catch(done);
+})
+})

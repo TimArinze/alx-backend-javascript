@@ -1,4 +1,5 @@
 const mocha = require("mocha")
+//expect from chai
 const expect = require("chai").expect
 const calculateNumber = require("./2-calcul_chai.js")
 

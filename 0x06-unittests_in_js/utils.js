@@ -1,4 +1,6 @@
+//utils module
 const Utils = {
+	//calculateNumber property and the function becomes the value of the property
 	calculateNumber : (type, a, b) => {
 	if (type === "SUM") {
 		return Math.round(a) + Math.round(b)

@@ -2,7 +2,7 @@ const mocha = require("mocha")
 const assert = require("assert")
 const calculateNumber = require("./0-calcul.js")
 
-
+//Using assert from node and mocha to test calculateNumber for different cases
 describe('Calculate', () => {
 	it("Calculate should return the ceiling", () => {
 		assert.equal(calculateNumber(1.5, 3.7), 6)
